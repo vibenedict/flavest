@@ -28,7 +28,8 @@ const VERIFIER = need("WEB2JSON_VERIFIER_URL").replace(/\/$/, "");
 const API_KEY = need("VERIFIER_API_KEY");
 const DA_LAYER = need("DA_LAYER_URL").replace(/\/$/, "");
 const FLAVEST = need("NEXT_PUBLIC_FLAVEST_ATTEST_REGISTRY");
-const SAFETY_API = need("FLAVEST_SAFETY_API");
+// Optional CLI override, e.g. `node ... attest.mjs "https://…/api/safety?token=FLXR"`.
+const SAFETY_API = process.argv[2] || need("FLAVEST_SAFETY_API");
 
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 const provider = new JsonRpcProvider(RPC, undefined, { staticNetwork: true });
