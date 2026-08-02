@@ -47,7 +47,7 @@ If no injected wallet is present, the app falls back to a demo account and the s
 
 Set `NEXT_PUBLIC_FLAVEST_ATTEST_REGISTRY` after deploy so the app reads verdicts from your instance. The Coston2 testnet verifier is open (public API key in `.env.example`), so `attest.mjs` runs end-to-end with just a funded Coston2 key.
 
-**Proven live:** the `$NOVA` safety verdict is already attested on-chain — round `1414079`, [tx](https://coston2-explorer.flare.network/tx/0xf1a89f3f385037c1c41f20762ac14f452324ab3197dfca9faa4be4e6c3ac9272) — so its token panel shows "attested · round 1414079".
+**Proven live:** all 7 feed tokens are attested on-chain, each in its own FDC voting round (e.g. `$NOVA` round `1414079`, [tx](https://coston2-explorer.flare.network/tx/0xf1a89f3f385037c1c41f20762ac14f452324ab3197dfca9faa4be4e6c3ac9272)) — so every token panel shows "attested · round N".
 
 ### 4. On-chain identity + activity
 
