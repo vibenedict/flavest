@@ -45,7 +45,9 @@ If no injected wallet is present, the app falls back to a demo account and the s
 - `scripts/fdc/attest.mjs` — the full FDC flow: `prepareRequest` → `FdcHub.requestAttestation` (pays the fee) → wait for round finalization → fetch the Merkle proof from the DA layer → `addAttestation` (verified on-chain).
 - `app/lib/fdc.ts` — the app resolves the live FDC contracts + current voting round from Coston2, and reads attested verdicts back from the registry. The token detail's **"Verified on Flare"** panel shows the real FDC verifier address (links to the Coston2 explorer) and the live voting round.
 
-Set `NEXT_PUBLIC_FLAVEST_ATTEST_REGISTRY` after deploy so the app reads verdicts from your instance. To attest for real you supply a verifier API key + a funded Coston2 key (see `.env.example`).
+Set `NEXT_PUBLIC_FLAVEST_ATTEST_REGISTRY` after deploy so the app reads verdicts from your instance. The Coston2 testnet verifier is open (public API key in `.env.example`), so `attest.mjs` runs end-to-end with just a funded Coston2 key.
+
+**Proven live:** the `$NOVA` safety verdict is already attested on-chain — round `1414079`, [tx](https://coston2-explorer.flare.network/tx/0xf1a89f3f385037c1c41f20762ac14f452324ab3197dfca9faa4be4e6c3ac9272) — so its token panel shows "attested · round 1414079".
 
 ### 4. On-chain identity + activity
 
