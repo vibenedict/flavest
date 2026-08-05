@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 172" width="640" height="172" role="img" aria-label="Flavest">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@600&display=swap');
+      .flv { font-family: 'Space Grotesk', 'Inter', system-ui, sans-serif; font-weight: 600; }
+    </style>
+    <linearGradient id="flvGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ff4d8d"></stop>
+      <stop offset="1" stop-color="#ff9a3d"></stop>
+    </linearGradient>
+  </defs>
+  <text class="flv" x="24" y="120" font-size="104" letter-spacing="-4">
+    <tspan fill="#e9e9ed">Fl</tspan><tspan fill="url(#flvGrad)">a</tspan><tspan fill="#e9e9ed">vest</tspan>
+  </text>
+  <path d="M150 150 L214 150 L250 159 L318 137 L392 151 L466 145 L616 145" fill="none" stroke="#ff4d8d" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" opacity="0.6"></path>
+</svg>

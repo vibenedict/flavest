@@ -7,6 +7,7 @@ import { useFlareWallet, memoHex, type FlareNetwork } from "../lib/flare";
 import { fetchFtsoPrices, type FtsoPrices } from "../lib/ftso";
 import { fetchFdcStatus, fetchAttestedListing, COSTON2_EXPLORER, type FdcStatus, type AttestedListing } from "../lib/fdc";
 import Background from "./Background";
+import { FlavestWordmark, FlavestIcon } from "./Logo";
 
 // ── config (mirrors the design comp's data-props defaults) ──────────────────
 const NETWORK: FlareNetwork = "Flare Mainnet";
@@ -381,14 +382,9 @@ export default function FlavestApp() {
 
       {/* ══ SIDEBAR ══ */}
       <aside style={css("position:relative;z-index:1;width:236px;flex:none;display:flex;flex-direction:column;padding:18px 14px;border-right:1px solid var(--color-divider);background:linear-gradient(180deg,rgba(24,26,41,.93),rgba(19,21,33,.95))")}>
-        <div style={css("display:flex;align-items:center;gap:9px;padding:0 6px 4px")}>
-          <div style={css("width:30px;height:30px;border-radius:8px;background:linear-gradient(135deg,var(--color-accent),#5d5294);display:grid;place-items:center;flex:none;box-shadow:0 0 14px rgba(145,132,217,.4)")}>
-            <Ic s={16} d={P.lightning} fill="#161826" />
-          </div>
-          <div style={css("line-height:1.05")}>
-            <div style={css("font-family:var(--font-heading);font-weight:600;font-size:17px;letter-spacing:-.02em")}>Flavest</div>
-            <div style={css("font-size:9.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--color-neutral-500)")}>Launch Radar</div>
-          </div>
+        <div style={css("padding:2px 6px 4px")}>
+          <FlavestWordmark width={150} />
+          <div style={css("font-size:9.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--color-neutral-500);margin-top:5px;padding-left:2px")}>Launch Radar</div>
         </div>
 
         <div style={css("margin:16px 0 6px;font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--color-neutral-600);padding:0 6px")}>Workspace</div>
@@ -831,7 +827,7 @@ export default function FlavestApp() {
                 <div style={css("width:100%;height:100%;border-radius:29px;background:var(--color-bg);overflow:hidden;position:relative;display:flex;flex-direction:column")}>
                   <div style={css("position:absolute;top:9px;left:50%;transform:translateX(-50%);width:92px;height:22px;background:#0f111c;border-radius:14px;z-index:2")} />
                   <div style={css("padding:20px 16px 12px;display:flex;align-items:center;gap:8px")}>
-                    <div style={css("width:24px;height:24px;border-radius:7px;background:linear-gradient(135deg,var(--color-accent),#5d5294);display:grid;place-items:center")}><Ic s={12} d={P.lightning} fill="#161826" /></div>
+                    <FlavestIcon size={24} />
                     <b style={css("font-size:15px;font-family:var(--font-heading)")}>Live Feed</b>
                     <span style={css("margin-left:auto;width:7px;height:7px;border-radius:50%;background:#4ea89a;animation:flvpulse 1.4s infinite")} />
                   </div>
@@ -862,7 +858,7 @@ export default function FlavestApp() {
                   <div style={css("font-size:12px;color:var(--color-neutral-400);margin-bottom:24px")}>Thursday, June 12</div>
                   <div style={css("width:86%;background:rgba(35,37,50,.92);backdrop-filter:blur(8px);border-radius:16px;padding:13px;box-shadow:var(--shadow-md);animation:flvslide .5s ease")}>
                     <div style={css("display:flex;align-items:center;gap:8px;margin-bottom:8px")}>
-                      <div style={css("width:20px;height:20px;border-radius:5px;background:linear-gradient(135deg,var(--color-accent),#5d5294);display:grid;place-items:center")}><Ic s={11} d={P.lightning} fill="#161826" /></div>
+                      <FlavestIcon size={20} />
                       <b style={css("font-size:12px;font-family:var(--font-heading)")}>Flavest</b>
                       <span style={css("margin-left:auto;font-size:10px;color:var(--color-neutral-500)")}>now</span>
                     </div>

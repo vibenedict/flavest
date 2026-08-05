@@ -3,7 +3,7 @@
    Ported from the project's _ds/nocturne bundle (styles.css). Source of truth
    for the Flavest look: retune tokens here.
    ========================================================================== */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap');
 
 :root {
   --color-bg: #161826;
@@ -50,6 +50,13 @@
   --font-heading: "Inter", system-ui, sans-serif;
   --font-heading-weight: 500;
   --font-body: "Inter", system-ui, sans-serif;
+  --font-brand: "Space Grotesk", "Inter", system-ui, sans-serif;
+
+  /* Flavest brand — signal gradient + inks (from the logo handoff) */
+  --brand-signal-start: #ff4d8d;
+  --brand-signal-end: #ff9a3d;
+  --brand-signal: linear-gradient(135deg, #ff4d8d, #ff9a3d);
+  --brand-ink-on-accent: #1a0f16;
 
   --space-1: 2.8px;
   --space-2: 5.6px;
